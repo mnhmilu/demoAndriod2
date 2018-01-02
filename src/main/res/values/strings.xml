@@ -8,4 +8,6 @@
 
     <string name="title_activity_fullscreen_sq_lite">FullscreenActivitySqLite</string>
     <string name="title_activity_main2_sq_lite">Main2ActivitySqLite</string>
+    <string name="title_activity_main_sqlite_index">MainActivitySQLiteIndex</string>
+    <string name="title_activity_main_new_data_entry">MainActivityNewDataEntry</string>
 </resources>

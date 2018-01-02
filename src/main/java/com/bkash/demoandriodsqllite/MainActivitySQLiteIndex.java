@@ -17,24 +17,43 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class Main2ActivitySqLite extends AppCompatActivity {
+public class MainActivitySQLiteIndex extends AppCompatActivity {
 
     ArrayList<String> listItems = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2_sq_lite);
+        setContentView(R.layout.activity_main_sqlite_index);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivityNewDataEntry.class);
+                getApplicationContext().startActivity(intent);
+
+                //Sna/ckbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    //    .setAction("Action", null).show();
+            }
+        });
+
+        //SQLite exxmaple
         //sq lite exmaple
         SQLiteDatabase db =this.openOrCreateDatabase("NahidDb",MODE_PRIVATE,null);
         db.execSQL("CREATE TABLE IF NOT EXISTS mytable (name VARTCHAR,age INT(3))");
-        db.execSQL("DELETE FROM MYTABLE");
-        db.execSQL("INSERT INTO mytable(name,age) VALUES('NAHID',3)");
+        //db.execSQL("DELETE FROM MYTABLE");
+       // db.execSQL("INSERT INTO mytable(name,age) VALUES('NAHID',3)");
+        //db.execSQL("INSERT INTO mytable(name,age) VALUES('NAHID2',4)");
+        //db.execSQL("INSERT INTO mytable(name,age) VALUES('NAHID3',5)");
+        //db.execSQL("INSERT INTO mytable(name,age) VALUES('NAHID4',6)");
 
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this,R.layout.activity_list_view,R.id.textView,listItems);
 
-        ListView myListView=(ListView) findViewById(R.id.myListView2);
+        ListView myListView=(ListView) findViewById(R.id.myListView3);
         myListView.setAdapter(adapter);
 
         Cursor cursor = db.rawQuery("SELECT * FROM mytable",null);
@@ -56,19 +75,14 @@ public class Main2ActivitySqLite extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                    String name = adapter.getItem(position);
+                String name = adapter.getItem(position);
 
-                    Toast.makeText(getApplicationContext(), "You clicked " + name, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "You clicked " + name, Toast.LENGTH_SHORT).show();
 
 
             }
         });
 
-
-
-
     }
-
-
 
 }

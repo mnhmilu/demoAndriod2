@@ -27,6 +27,14 @@
         <activity
             android:name=".Main2ActivitySqLite"
             android:label="@string/title_activity_main2_sq_lite"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivitySQLiteIndex"
+            android:label="@string/title_activity_main_sqlite_index"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivityNewDataEntry"
+            android:label="@string/title_activity_main_new_data_entry"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

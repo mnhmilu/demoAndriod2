@@ -29,9 +29,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.activity_list_view, R.id.textView, countryList);
         ListView simpleList = (ListView) findViewById(R.id.myListView);
-
         simpleList.setAdapter(arrayAdapter);
 
 
@@ -42,7 +46,13 @@ public class MainActivity extends AppCompatActivity {
                                                       Intent intent = new Intent(getApplicationContext(), Main2ActivitySqLite.class);
                                                       getApplicationContext().startActivity(intent);
 
-                                                  } else {
+                                                  }
+                                                  if (position == 1) {
+                                                      Intent intent = new Intent(getApplicationContext(), MainActivitySQLiteIndex.class);
+                                                      getApplicationContext().startActivity(intent);
+
+                                                  }
+                                                  else {
 
                                                       // String name =c(position);
 
@@ -55,4 +65,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

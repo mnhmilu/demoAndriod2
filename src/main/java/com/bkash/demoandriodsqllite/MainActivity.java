@@ -57,6 +57,11 @@ public class MainActivity extends AppCompatActivity {
                                                       getApplicationContext().startActivity(intent);
 
                                                   }
+                                                  if (position == 2) {
+                                                      Intent intent = new Intent(getApplicationContext(), MainActivityCRUDAdvance.class);
+                                                      getApplicationContext().startActivity(intent);
+
+                                                  }
                                                   else {
 
                                                       // String name =c(position);

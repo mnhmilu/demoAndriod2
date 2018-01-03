@@ -35,6 +35,10 @@
         <activity
             android:name=".MainActivityNewDataEntry"
             android:label="@string/title_activity_main_new_data_entry"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivityCRUDAdvance"
+            android:label="@string/title_activity_main_crudadvance"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

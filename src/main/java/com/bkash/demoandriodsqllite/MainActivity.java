@@ -23,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> listItems = new ArrayList<String>();
     // ListView simpleList;
-    String countryList[] = {"SQLite Example-1", "CRUD Example", "australia", "Portugle", "America", "NewZealand"};
+    String countryList[] = {"Example-1:SQLite Basic",
+            "Example-2:Add Item with SQLite",
+            "Example-3:CRUD With SQLite",
+            "Example-4",
+            "Example-5",
+            "Example-6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

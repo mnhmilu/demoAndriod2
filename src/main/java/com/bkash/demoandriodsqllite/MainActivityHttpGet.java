@@ -42,6 +42,7 @@ public class MainActivityHttpGet extends AppCompatActivity {
 
             @Override
             public void onErrorResponse(VolleyError error) {
+                txtDisplay.setText(error.getMessage());
                 // TODO Auto-generated method stub
 
             }

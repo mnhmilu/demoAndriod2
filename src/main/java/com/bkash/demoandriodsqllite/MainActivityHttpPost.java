@@ -45,6 +45,7 @@ public class MainActivityHttpPost extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         // error
                         Log.d("Error.Response", error.getMessage());
+                        txtDisplay.setText(error.getMessage());
                     }
                 }
         ) {

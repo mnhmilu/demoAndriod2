@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     String countryList[] = {"Example-1:SQLite Basic",
             "Example-2:Add Item with SQLite",
             "Example-3:CRUD With SQLite",
-            "Example-4",
+            "Example-4:Http Example",
             "Example-5",
             "Example-6"};
 
@@ -59,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
                                                   }
                                                   if (position == 2) {
                                                       Intent intent = new Intent(getApplicationContext(), MainActivityCRUDAdvance.class);
+                                                      getApplicationContext().startActivity(intent);
+
+                                                  }
+                                                  if (position == 3) {
+                                                      Intent intent = new Intent(getApplicationContext(), MainActivityHttpExample.class);
                                                       getApplicationContext().startActivity(intent);
 
                                                   }

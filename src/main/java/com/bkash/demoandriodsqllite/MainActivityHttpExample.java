@@ -37,4 +37,17 @@ public class MainActivityHttpExample extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivityHttpPost.class);
         getApplicationContext().startActivity(intent);
     }
+
+    public void openHttpGetJsonParse(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivityHttpGetJsonParse.class);
+        getApplicationContext().startActivity(intent);
+    }
+
+    public void openHttpPostJsonArrayParse(View view) {
+
+        Intent intent = new Intent(getApplicationContext(), MainActivityHttpGetJsonArrayParse.class);
+        getApplicationContext().startActivity(intent);
+
+
+    }
 }

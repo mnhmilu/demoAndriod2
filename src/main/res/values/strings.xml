@@ -12,4 +12,5 @@
     <string name="title_activity_main_new_data_entry">MainActivityNewDataEntry</string>
     <string name="title_activity_main_crudadvance">MainActivityCRUDAdvance</string>
     <string name="title_activity_main_http_example">MainActivityHttpExample</string>
+    <string name="title_activity_main_http_get_json_parse">MainActivityHttpGetJsonParse</string>
 </resources>

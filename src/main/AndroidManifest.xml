@@ -50,7 +50,12 @@
             android:label="@string/title_activity_main_http_example"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivityHttpGet" />
-        <activity android:name=".MainActivityHttpPost"></activity>
+        <activity android:name=".MainActivityHttpPost" />
+        <activity
+            android:name=".MainActivityHttpGetJsonParse"
+            android:label="@string/title_activity_main_http_get_json_parse"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivityHttpGetJsonArrayParse"></activity>
     </application>
 
 </manifest>

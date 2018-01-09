@@ -12,6 +12,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,12 +34,18 @@ public class MainActivityHttpPost extends AppCompatActivity {
         StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>()
                 {
+
+
                     @Override
+
                     public void onResponse(String response) {
                         // response
                         Log.d("Response", response);
                         txtDisplay.setText(response);
+
                     }
+
+
                 },
                 new Response.ErrorListener()
                 {
